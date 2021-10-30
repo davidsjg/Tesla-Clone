@@ -12,8 +12,27 @@ import lake1 from "./components/images/Beartracks.JPG";
 import lake2 from "./components/images/Heart.JPG";
 
 function App() {
+  let oldPicture = lake1;
+  let newPicture = lake2;
+  let cardCont = document.getElementById("cardContainer");
+  let tempPicture;
+  let Card11 = "./components/images/Snow.JPG";
+  let Card21 = "./components/images/Beartracks.JPG";
+  let Card31 = "./components/images/Heart.JPG";
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
+  const [oldPic, setOldPic] = useState(lake);
+  const [newPic, setNewPic] = useState(lake1);
+
+  console.log(cardCont);
+
+  {
+    cardCont !== null &&
+      cardCont.find("div").hover(function () {
+        cardCont.css({ backgroundColor: "red" });
+      });
+  }
+
   let tempArray = [
     {
       title: "Card1",
@@ -41,6 +60,9 @@ function App() {
     switch (card) {
       case "Card1":
         setIsShown1(true);
+
+        setNewPic(lake1);
+
         break;
       case "Card2":
         setIsShown2(true);
@@ -64,8 +86,7 @@ function App() {
     }
   }
 
-  function trueFunction2() {
-    card2 = true;
+  function trueFunction2(card) {
     setIsShown2(true);
   }
   function falseFunction2() {
@@ -75,6 +96,7 @@ function App() {
 
   return (
     <Container
+      id="cardContainer"
       className={cn("container", {
         mainContain: card1 === false,
         // card1Contain: card1 === true,
@@ -93,10 +115,14 @@ function App() {
         {/* <img src={lake1} className="lower-image" />
         <img src={lake2} class="upper-image" /> */}
 
-        {!isShown1 && <img src={lake} className="lower-image" />}
+        {!isShown1 && <img src={oldPic} className="lower-image" />}
 
-        {isShown1 && <img src={lake1} className="lower-image" />}
-        {isShown1 && <img src={lake2} class="upper-image" />}
+        {isShown1 && <img src={oldPic} className="lower-image" />}
+        {isShown1 && <img src={newPic} class="upper-image" />}
+      </Container>
+
+      <Container className="test1">
+        <button className="testButton">sup yall</button>
       </Container>
       {/* <Container>
         <img src="https://picsum.photos/id/100/400/300" />

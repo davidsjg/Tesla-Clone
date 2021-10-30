@@ -25,7 +25,7 @@ export default function FrameCard({ card, trueFunction, falseFunction }) {
       onMouseOver={overMainChange}
       onMouseLeave={leaveMainChange}
       style={{ width: "18rem" }}
-      className={cn("cards", {
+      className={cn("cards ", {
         carShareTitle: card.class === "CarShare",
         jpwTitle: card.class === "JPW",
         beaverTitle: card.class === "BeaverFrames",
