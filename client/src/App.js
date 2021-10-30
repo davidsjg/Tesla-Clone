@@ -79,11 +79,27 @@ function App() {
         // card1Contain: card1 === true,
       })}
     >
-      <div className="mainImage">
+      {/* <div className="mainImage">
         {isShown1 && <Image src={lake1} rounded className="mainImage" />}
         {isShown2 && <Image src={lake2} rounded className="mainImage" />}
-      </div>
-      {card2 && <Image src="./components/images/Heart.JPG" rounded />}
+      </div> */}
+      {/* <div className="mainImage">
+        {isShown1 &&         <img src={lake1} className="lower-image" />}
+        {isShown2 &&         <img src={lake2} class="upper-image" />}
+      </div> */}
+
+      <Container className="container1">
+        {/* <img src={lake1} className="lower-image" />
+        <img src={lake2} class="upper-image" /> */}
+
+        <img src={lake1} className="lower-image" />
+        <img src={lake2} class="upper-image" />
+      </Container>
+      {/* <Container>
+        <img src="https://picsum.photos/id/100/400/300" />
+        <img src="https://picsum.photos/id/200/400/300" class="upper-image" />
+      </Container> */}
+
       <Row>
         <Row>
           <Col sm={4}>

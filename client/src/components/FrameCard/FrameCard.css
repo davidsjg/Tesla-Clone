@@ -1,6 +1,6 @@
 .mainContain {
   min-height: 100%;
-  background-image: url("../images/Beartracks.JPG");
+  background-image: url("../images/Snow.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -11,7 +11,7 @@
 }
 .card1Contain {
   min-height: 100%;
-  background-image: url("../images/Heart.JPG");
+  background-image: url("../images/Snow.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
