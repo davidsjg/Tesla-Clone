@@ -7,6 +7,7 @@ import "./App.css";
 import FrameCard from "./components/FrameCard/FrameCard";
 import cn from "classnames";
 
+import lake from "./components/images/Snow.JPG";
 import lake1 from "./components/images/Beartracks.JPG";
 import lake2 from "./components/images/Heart.JPG";
 
@@ -92,8 +93,10 @@ function App() {
         {/* <img src={lake1} className="lower-image" />
         <img src={lake2} class="upper-image" /> */}
 
-        <img src={lake1} className="lower-image" />
-        <img src={lake2} class="upper-image" />
+        {!isShown1 && <img src={lake} className="lower-image" />}
+
+        {isShown1 && <img src={lake1} className="lower-image" />}
+        {isShown1 && <img src={lake2} class="upper-image" />}
       </Container>
       {/* <Container>
         <img src="https://picsum.photos/id/100/400/300" />
