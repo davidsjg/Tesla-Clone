@@ -7,15 +7,17 @@ import styles from "./FrameCard.css";
 import cn from "classnames";
 
 export default function FrameCard({ card, trueFunction, falseFunction }) {
-  const [isShown, setIsShown] = useState(false);
+  const [isShown1, setIsShown1] = useState(false);
+  const [isShown2, setIsShown2] = useState(false);
 
   function overMainChange(e) {
+    console.log(e.target.textContent);
     e.target.style.background = "red";
-    trueFunction();
+    trueFunction(e.target.textContent);
   }
   function leaveMainChange(e) {
     e.target.style.background = "white";
-    falseFunction();
+    falseFunction(e.target.textContent);
   }
 
   return (
