@@ -5,8 +5,7 @@ import Section from "../Section/Section";
 function Home() {
   return (
     <Container>
-      Home
-      <Section />
+      <Section></Section>
     </Container>
   );
 }
